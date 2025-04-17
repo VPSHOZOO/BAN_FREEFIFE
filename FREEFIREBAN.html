@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Ban Report System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Free Fire Ban Report System</h1>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h3>Report Player for Ban</h3>
+            </div>
+            <div class="card-body">
+                <form id="reportForm">
+                    <div class="mb-3">
+                        <label for="playerId" class="form-label">Player ID</label>
+                        <input type="text" class="form-control" id="playerId" required placeholder="Enter Player ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="playerName" class="form-label">Player Name</label>
+                        <input type="text" class="form-control" id="playerName" placeholder="Enter Player Name (optional)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Reason for Ban</label>
+                        <select class="form-select" id="reason" required>
+                            <option value="" selected disabled>Select reason</option>
+                            <option value="hacking">Hacking/Cheating</option>
+                            <option value="teamkill">Team Killing</option>
+                            <option value="abuse">Verbal Abuse</option>
+                            <option value="bot">Bot Account</option>
+                            <option value="other">Other Violation</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="evidence" class="form-label">Evidence (URL or Description)</label>
+                        <textarea class="form-control" id="evidence" rows="3" required placeholder="Provide evidence links or description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reporter" class="form-label">Your Name/ID (optional)</label>
+                        <input type="text" class="form-control" id="reporter" placeholder="Your identifier (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit Report</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h3>Recent Reports</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Player ID</th>
+                                <th>Player Name</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Reported At</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportsTable">
+                            <!-- Reports will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
