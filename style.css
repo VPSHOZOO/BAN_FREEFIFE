@@ -1,0 +1,66 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.status-pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+status-banned {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+status-reviewed {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+}
+
+.form-control, .form-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
